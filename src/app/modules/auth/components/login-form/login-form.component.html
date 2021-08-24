@@ -1,0 +1,86 @@
+<form class="p-[24px] w-full h-full" (ngSubmit)="onSubmit()">
+  <div
+    class="
+      px-[16.5%]
+      rounded-[24px]
+      bg-white
+      w-full
+      h-full
+      flex flex-col
+      justify-center
+      items-stretch
+    "
+  >
+    <p
+      class="font-bold text-blueGray-900 text-[40px] leading-[60px] tracking-[1px]"
+      style="font-family: 'PoppinsBold'"
+    >
+      Welcome to Starsoft's Customer Portal
+    </p>
+
+    <input
+      type="email"
+      id="email"
+      name="email"
+      placeholder="Enter your Email address"
+      [(ngModel)]="email"
+      class="
+        mt-[48px]
+        px-[24px]
+        py-[16px]
+        rounded-[8px]
+        bg-blueGray-200
+        text-[16px]
+        leading-[24px]
+        tracking-[0.75px]
+        focus:outline-none
+        ring-0
+        focus:ring-2
+        ring-blue-600
+      "
+    />
+
+    <input
+      type="password"
+      id="password"
+      name="password"
+      placeholder="Enter your password"
+      [(ngModel)]="password"
+      class="
+        mt-[18px]
+        px-[24px]
+        py-[16px]
+        rounded-[8px]
+        bg-blueGray-200
+        text-[16px]
+        leading-[24px]
+        tracking-[0.75px]
+        focus:outline-none
+        ring-0
+        focus:ring-2
+        ring-blue-600
+      "
+    />
+
+    <p *ngIf="isLoading" class="mt-[24px] mb-[12px] text-[14px]">Loading...</p>
+    <p *ngIf="error" class="mt-[24px] mb-[12px] text-red-500 text-[14px]">{{ error }}</p>
+
+    <button
+      type="submit"
+      class="
+        h-[42px]
+        mt-[36px]
+        rounded-[8px]
+        bg-red-500
+        font-semibold
+        text-blueGray-50 text-[15px]
+        leading-[22.5px]
+        tracking-[0.75px]
+        uppercase
+      "
+      style="font-family: 'PoppinsSemiBold'"
+    >
+      Login
+    </button>
+  </div>
+</form>
